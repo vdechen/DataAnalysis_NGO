@@ -224,6 +224,7 @@
           </address>
         </table-calc>
       </column-instance>
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
       <column-instance column='[favorecido]' derivation='None' name='[none:favorecido:nk]' pivot='key' type='nominal' />
       <column-instance column='[despesas]' derivation='Sum' name='[pcto:sum:despesas:qk:1]' pivot='key' type='quantitative'>
         <table-calc ordering-field='[federated.1u0ts2b16y6zay1eybwme149tvmd].[none:favorecido:nk]' ordering-type='Field' type='PctTotal' />
@@ -301,11 +302,27 @@
               <bucket>&quot;[federated.1u0ts2b16y6zay1eybwme149tvmd].[sum:receita:qk]&quot;</bucket>
             </map>
           </encoding>
+          <encoding attr='color' field='[none:Forecast Indicator:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Real&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Estimar&quot;</bucket>
+            </map>
+          </encoding>
         </style-rule>
       </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Brasil&quot;' />
       </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Real&quot;</bucket>
+            <bucket>&quot;Estimar&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
       <field-sort-info field-sort-order-type='custom-order'>
         <field-sort-custom-order field='despesas' />
         <field-sort-custom-order field='Calculation_997828794363109376' />
@@ -467,6 +484,51 @@
     </datasource>
   </datasources>
   <worksheets>
+    <worksheet name='Planilha 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Múltiplas conexões)' name='federated.1u0ts2b16y6zay1eybwme149tvmd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1u0ts2b16y6zay1eybwme149tvmd'>
+            <column caption='Data (Income)' datatype='date' name='[data (income)]' role='dimension' type='ordinal' />
+            <column-instance column='[receita]' derivation='Sum' forecast-column-base='[sum:receita:qk]' forecast-column-type='forecast-value' name='[fVal:sum:receita:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column caption='Receita' datatype='real' name='[receita]' role='measure' type='quantitative' />
+            <column-instance column='[receita]' derivation='Sum' name='[sum:receita:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[data (income)]' derivation='Month-Trunc' name='[tmn:data (income):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[data (income)]' derivation='Year' name='[yr:data (income):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data (income):ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:data (income):ok]' member='2020' />
+              <groupfilter function='member' level='[yr:data (income):ok]' member='2021' />
+              <groupfilter function='member' level='[yr:data (income):ok]' member='2022' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data (income):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1u0ts2b16y6zay1eybwme149tvmd].[none:Forecast Indicator:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1u0ts2b16y6zay1eybwme149tvmd].[fVal:sum:receita:qk]</rows>
+        <cols>[federated.1u0ts2b16y6zay1eybwme149tvmd].[tmn:data (income):qk]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{9271B0AF-AA0C-4E36-B2CB-90E695122544}' />
+    </worksheet>
     <worksheet name='cuidados'>
       <layout-options>
         <title>
@@ -926,20 +988,20 @@
       <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
       <zones>
         <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0' />
-        <zone h='18500' id='5' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/logo OBA.png' type-v2='bitmap' w='33200' x='1000' y='7875' />
-        <zone h='35500' id='8' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/saúde única.png' type-v2='bitmap' w='28500' x='4100' y='26875' />
-        <zone h='38750' id='10' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/ciclo-pulga.png' type-v2='bitmap' w='26900' x='70800' y='2250' />
-        <zone forceUpdate='' h='36875' id='15' param='https://raw.githubusercontent.com/vdechen/NGO_DataAnalysis/main/images/gif%20prolifera%C3%A7%C3%A3o%20gatos/gif%20pronto.gif?token=GHSAT0AAAAAAB5IOS6DRV6XAJ5CQX6YN4JAZAHMW2Q' type-v2='web' w='29500' x='36800' y='2750' />
-        <zone h='31000' id='21' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (1).png' type-v2='bitmap' w='24100' x='35500' y='36500' />
-        <zone forceUpdate='true' h='28000' id='22' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (2).png' type-v2='bitmap' w='22000' x='61500' y='40250' />
+        <zone h='18500' id='5' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/logo OBA.png' type-v2='bitmap' w='33200' x='1400' y='1250' />
+        <zone h='28500' id='8' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/saúde única.png' type-v2='bitmap' w='22900' x='74900' y='37375' />
+        <zone h='38750' id='10' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/ciclo-pulga.png' type-v2='bitmap' w='26900' x='70900' y='1500' />
+        <zone forceUpdate='' h='45750' id='15' param='https://raw.githubusercontent.com/vdechen/NGO_DataAnalysis/main/images/gif%20prolifera%C3%A7%C3%A3o%20gatos/gif%20pronto.gif?token=GHSAT0AAAAAAB5IOS6DRV6XAJ5CQX6YN4JAZAHMW2Q' type-v2='web' w='36600' x='32100' y='17000' />
+        <zone h='31000' id='21' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (1).png' type-v2='bitmap' w='24100' x='3700' y='14625' />
+        <zone forceUpdate='true' h='28000' id='22' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (2).png' type-v2='bitmap' w='22000' x='4700' y='41750' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
+          <size maxheight='1500' minheight='1500' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='32' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='31' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
-                <zone fixed-size='280' h='38750' id='10' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/ciclo-pulga.png' type-v2='bitmap' w='26900' x='70800' y='2250'>
+            <zone h='100000' id='34' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='33' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='148' h='18500' id='5' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/logo OBA.png' type-v2='bitmap' w='33200' x='1400' y='1250'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -948,7 +1010,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' forceUpdate='' h='36875' id='15' is-fixed='true' param='https://raw.githubusercontent.com/vdechen/NGO_DataAnalysis/main/images/gif%20prolifera%C3%A7%C3%A3o%20gatos/gif%20pronto.gif?token=GHSAT0AAAAAAB5IOS6DRV6XAJ5CQX6YN4JAZAHMW2Q' type-v2='web' w='29500' x='36800' y='2750'>
+                <zone fixed-size='280' h='38750' id='10' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/ciclo-pulga.png' type-v2='bitmap' w='26900' x='70900' y='1500'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -957,7 +1019,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='141' h='17625' id='5' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/logo OBA.png' type-v2='bitmap' w='31200' x='1000' y='7875'>
+                <zone fixed-size='248' h='31000' id='21' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (1).png' type-v2='bitmap' w='24100' x='3700' y='14625'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -966,7 +1028,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='35500' id='8' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/saúde única.png' type-v2='bitmap' w='28500' x='4100' y='26875'>
+                <zone fixed-size='280' forceUpdate='' h='45750' id='15' is-fixed='true' param='https://raw.githubusercontent.com/vdechen/NGO_DataAnalysis/main/images/gif%20prolifera%C3%A7%C3%A3o%20gatos/gif%20pronto.gif?token=GHSAT0AAAAAAB5IOS6DRV6XAJ5CQX6YN4JAZAHMW2Q' type-v2='web' w='36600' x='32100' y='17000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -975,7 +1037,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='248' h='31000' id='21' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (1).png' type-v2='bitmap' w='24100' x='35500' y='36500'>
+                <zone fixed-size='228' h='28500' id='8' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/saúde única.png' type-v2='bitmap' w='22900' x='74900' y='37375'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -984,7 +1046,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='224' forceUpdate='true' h='28000' id='22' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (2).png' type-v2='bitmap' w='22000' x='61500' y='40250'>
+                <zone fixed-size='224' forceUpdate='true' h='28000' id='22' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (2).png' type-v2='bitmap' w='22000' x='4700' y='41750'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1002,9 +1064,9 @@
     </dashboard>
   </dashboards>
   <windows source-height='51'>
-    <window class='dashboard' maximized='true' name='imagens'>
+    <window class='dashboard' name='imagens'>
       <viewpoints />
-      <active id='5' />
+      <active id='22' />
       <device-preview selected='Desktop' visible='true' />
       <simple-id uuid='{B4039BD5-7296-4428-A5C9-99DB84E42243}' />
     </window>
@@ -1101,6 +1163,30 @@
         </edge>
       </cards>
       <simple-id uuid='{C6F19623-8653-46FA-B5FA-378D15BEC667}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Planilha 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[none:Forecast Indicator:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4DAB1DD6-9268-4C02-B4D3-9D1960572739}' />
     </window>
   </windows>
 </workbook>
