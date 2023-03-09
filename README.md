@@ -15,10 +15,10 @@ This data analysis and visualization project aimed at presenting the work of OBA
 - The following categories were created and applied for 'depositante' in 'income': doações e vendas, empréstimos e aplicações, projeto Autopista Litoral Sul, governo, outros.
 - Data types were converted;
 - Exploratory data analysis was made; 
-- 
+(to be finished)
 
 # Conclusion
-
+(to be finished)
   
 # Contact
 - LinkedIn: vanessadechen
