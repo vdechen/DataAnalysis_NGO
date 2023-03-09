@@ -6,6 +6,7 @@ import streamlit as st
 from google.oauth2 import service_account
 from gsheetsdb import connect
 import pandas as pd
+import numpy as np
 import re
 
 # Create a connection object.
@@ -33,18 +34,16 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 arquivo = st.file_uploader('Insira o arquivo em excel', type = ['xls', 'xlsx'])
 df = pd.read_excel(arquivo)
 
-# add "month" and "year" columns, reorder columns, drop unwanted rows and save dataframes as excel files
+# add "month" and "year" columns
 month = df.iloc[0,1].month
 year = df.iloc[0,1].year
 data = str(year) + '-' + str(month) + '-' + '01'
 df['data'] = pd.to_datetime(data)
 df.drop(df.index[0:3], inplace = True)
+
+# reorder columns and drop unwanted rows 
 df.columns = ['dia', 'receita', 'depositante', 'despesas', 'favorecido', 'saldo', 'data']
 df = df[['receita', 'depositante', 'despesas', 'favorecido', 'data']]
-df['filler1'] = '1'
-df['filler2'] = '2'
-df['filler3'] = '3'
-df['filler4'] = '4'
 
-st.write(df)
+st.write(df, unsafe_allow_html= True)
 
