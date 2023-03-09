@@ -1889,7 +1889,724 @@
     </worksheet>
   </worksheets>
   <dashboards>
-    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard'>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard (apr)'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='text-align' id='dash-text_15' value='center' />
+          <format attr='vertical-align' id='dash-text_15' value='center' />
+          <format attr='wrap' id='dash-text_15' value='on' />
+        </style-rule>
+      </style>
+      <size maxheight='3200' maxwidth='1000' minheight='3200' minwidth='1000' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Sheet1 (Múltiplas conexões)' name='federated.1u0ts2b16y6zay1eybwme149tvmd' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1u0ts2b16y6zay1eybwme149tvmd'>
+        <column caption='Financiamento' datatype='string' name='[Data (grupo)]' role='dimension' type='nominal'>
+          <calculation class='categorical-bin' column='[data]' default='&quot;Sim (2016-2019)&quot;' new-bin='true'>
+            <bin default-name='false' value='&quot;Não&quot;'>
+              <value>#2020-01-01#</value>
+              <value>#2020-02-01#</value>
+              <value>#2020-03-01#</value>
+              <value>#2020-04-01#</value>
+              <value>#2020-05-01#</value>
+              <value>#2020-06-01#</value>
+              <value>#2020-07-01#</value>
+              <value>#2020-08-01#</value>
+              <value>#2020-09-01#</value>
+              <value>#2020-10-01#</value>
+              <value>#2020-11-01#</value>
+              <value>#2020-12-01#</value>
+              <value>#2021-01-01#</value>
+              <value>#2021-02-01#</value>
+              <value>#2021-03-01#</value>
+              <value>#2021-04-01#</value>
+              <value>#2021-05-01#</value>
+              <value>#2021-06-01#</value>
+              <value>#2021-07-01#</value>
+              <value>#2021-08-01#</value>
+              <value>#2021-09-01#</value>
+              <value>#2021-10-01#</value>
+              <value>#2021-11-01#</value>
+              <value>#2021-12-01#</value>
+              <value>#2022-01-01#</value>
+              <value>#2022-02-01#</value>
+              <value>#2022-03-01#</value>
+              <value>#2022-04-01#</value>
+              <value>#2022-05-01#</value>
+              <value>#2022-06-01#</value>
+              <value>#2022-07-01#</value>
+              <value>#2022-08-01#</value>
+              <value>#2022-09-01#</value>
+              <value>#2022-10-01#</value>
+              <value>#2022-11-01#</value>
+            </bin>
+          </calculation>
+        </column>
+        <column caption='Data (Income)' datatype='date' name='[data (income)]' role='dimension' type='ordinal' />
+        <column caption='Data' datatype='date' name='[data]' role='dimension' type='ordinal' />
+        <column-instance column='[data (income)]' derivation='Year' name='[yr:data (income):ok]' pivot='key' type='ordinal' />
+        <column-instance column='[data]' derivation='Year' name='[yr:data:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='99500' id='114' param='horz' type-v2='layout-flow' w='98400' x='800' y='250'>
+            <zone h='99500' id='110' type-v2='layout-basic' w='98400' x='800' y='250'>
+              <zone h='99500' id='12' is-centered='0' type-v2='bitmap' w='49200' x='50000' y='250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#ffaa0016' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='' h='99500' id='132' type-v2='web' w='49200' x='800' y='250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='3500' id='87' type-v2='text' w='26200' x='34500' y='83906'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#fbca80' />
+          </zone-style>
+        </zone>
+        <zone h='4594' id='52' type-v2='text' w='97700' x='900' y='375'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffaa001b' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='4563' id='3' type-v2='text' w='63200' x='4000' y='531'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='26'>Quanto custa a responsabilidade?</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='24'>Æ </run>
+            <run fontalignment='1'>Æ&#10;&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'>Saúde Única de animais de companhia, pessoas e meio ambiente</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'> nas aldeias indígenas da Grande Florianópolis </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5469' id='5' type-v2='text' w='35500' x='7400' y='5375'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>As aldeias indígenas da Grande Florianópolis </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>têm populações predominantemente da etnia </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Guarani, conhecidas pela receptividade a cães 
+e gatos. No entanto, tal receptividade promove </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>uma </run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>superpopulação de animais </run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>domésticos, </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>potencializando as </run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>zoonoses</run>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Æ </run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>e aumentando </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>a vulnerabilidade das pessoas a</run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'> doenças</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5594' id='6' type-v2='text' w='37600' x='7100' y='10656'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Algumas dessas comunidades estão em áreas próximas a unidades de conservação e a grande quantidade dos animais pode causar problemas, como </run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>predação de fauna nativa</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'> pela falta de alimentos, </run>
+            <run fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>brigas interespecíficas</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'> e aumento </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>da incidência dos </run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>maus-tratos</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>.</run>
+            <run>Æ&#10;&#10;&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone h='7406' id='7' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/saúde única.png' type-v2='bitmap' w='22900' x='41700' y='5719' />
+        <zone forceUpdate='true' h='5406' id='8' type-v2='text' w='26500' x='63400' y='9500'>
+          <formatted-text>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Essa indissociabilidade da saúde humana, animal e ambiental demonstra o que a Organização Mundial da Saúde (OMS) chama de </run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Saúde Única</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau light ' fontsize='11'>Saúde é uma</run>
+            <run bold='true' fontalignment='2' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'> questão pública</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>, que requer </run>
+            <run bold='true' fontalignment='2' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>recursos e ações continuados</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> para a promoção de equilíbrio nessas esferas. </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='1188' id='9' type-v2='text' w='37200' x='31400' y='15594'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='22'>E o que tem sido feito? </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='4781' id='10' type-v2='text' w='76800' x='10000' y='16313'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>A </run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Organização Bem-Animal (OBA - Floripa)</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> é uma organização não-governamental que visa a proteção dos direitos dos animais e tem sede em Florianópolis, SC. Desde 2008, atende a cães e gatos das aldeias indígenas, realizando visitas técnicas para controle de zoonoses, controle populacional através da cirurgia de </run>
+            <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>castração, educação ambiental, distribuição de ração, orientações e cuidados veterinários</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3969' id='15' type-v2='text' w='30100' x='35100' y='21656'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>Comunidades atendidas - 2023</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='10'>Itaty (Morro dos Cavalos), Praia de Fora 1, </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='10'>Yy’nn Moroti Wherá (Biguaçu), Tekoa Porã (Biguaçu), Tavaí (Canelinha).</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffaa0037' />
+          </zone-style>
+        </zone>
+        <zone h='3438' id='16' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/logo OBA.png' type-v2='bitmap' w='22400' x='68800' y='781' />
+        <zone forceUpdate='true' h='750' id='17' type-v2='text' w='19000' x='71000' y='3906'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Verdana' fontsize='10'>Organização Bem-Animal</run>
+          </formatted-text>
+        </zone>
+        <zone h='7031' id='18' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (1).png' type-v2='bitmap' w='32800' x='10400' y='19813' />
+        <zone h='6406' id='19' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (2).png' type-v2='bitmap' w='28400' x='67500' y='20844' />
+        <zone h='6656' id='21' name='cuidados' w='38400' x='51600' y='31500' />
+        <zone forceUpdate='true' h='4281' id='22' type-v2='text' w='36400' x='49600' y='26875'>
+          <formatted-text>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Os cuidados veterinários e castrações evitam a transmissão de doenças e a proliferação de animais. Para se ter uma ideia, cada gato </run>
+            <run fontalignment='2'>Æ&#10;</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>pode engravidar até 4 vezes ao ano, sendo </run>
+            <run fontalignment='2'>Æ&#10;</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>que cada ninhada gera até 6 filhotes.</run>
+            <run fontalignment='2'>Æ&#10;</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light'>Fonte: </run>
+            <run auto-url='true' fontalignment='2' fontcolor='#000000' fontname='Tableau Light' hyperlink='tabdoc:load-url url=&amp;quot;https://www.mvhclinic.org&amp;quot;'>https://www.mvhclinic.org</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3094' id='26' type-v2='text' w='85900' x='6000' y='38625'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>De 2016 a 2019, a ONG contou com o </run>
+            <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>incentivo financeiro</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> do Segundo Setor devido a um projeto de compensação ambiental (projeto Autopista Litoral Sul), sendo notáveis nos gráficos maiores receitas e despesas para as atividades nesse período. Assim, é evidente a</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Æ </run>
+            <run fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>necessidade de mais estrutura e recursos continuados para que mais possa ser feito</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+          </formatted-text>
+        </zone>
+        <zone h='11875' id='28' name='despesa_receita/ano' w='68200' x='6800' y='41906' />
+        <zone h='1750' id='29' name='despesa_receita/ano' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[:Measure Names]' show-title='false' type-v2='color' w='11500' x='77700' y='43281' />
+        <zone h='12656' id='30' name='receita_cat ' w='81300' x='6900' y='54500' />
+        <zone h='2031' id='31' name='receita_cat ' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[sum:receita:qk]' type-v2='color' w='12900' x='77200' y='56031' />
+        <zone h='13063' id='32' name='despesa_cat ' w='73300' x='6800' y='67625' />
+        <zone h='1781' id='33' name='despesa_cat ' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[sum:despesas:qk]' type-v2='color' w='12700' x='77200' y='69250' />
+        <zone h='9813' id='36' name='previsão' w='73300' x='8600' y='88906' />
+        <zone h='1375' id='37' name='previsão' pane-specification-id='1' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[none:Forecast Indicator:nk]' show-title='false' type-v2='color' w='10000' x='83500' y='97125' />
+        <zone h='1813' id='38' name='card_animais assistidos' show-title='false' w='20700' x='40200' y='84875' />
+        <zone forceUpdate='true' h='2031' id='40' type-v2='text' w='64700' x='15000' y='81844'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='14'>Estimativa de animais assistidos</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='11'>(renda total / custo anual médio por animal)</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='500' id='66' type-v2='text' w='10000' x='85500' y='97813'>
+          <formatted-text>
+            <run fontcolor='#000000'>Previsões</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#fef7e8' />
+          </zone-style>
+        </zone>
+        <zone h='5781' id='75' mode='checkdropdown' name='despesa_receita/ano' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='8300' x='77700' y='44906' />
+        <zone h='5656' id='76' mode='checkdropdown' name='receita_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='8200' x='77600' y='58094' />
+        <zone h='5656' id='77' mode='checkdropdown' name='despesa_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='7800' x='77500' y='71313' />
+        <zone h='1563' id='80' mode='checkdropdown' name='card_animais assistidos' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data (income):ok]' type-v2='filter' values='database' w='8600' x='64000' y='83938' />
+        <zone h='2531' id='88' name='despesa_receita/ano' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12700' x='77800' y='46688' />
+        <zone h='2531' id='89' name='receita_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12800' x='77600' y='59875' />
+        <zone h='2531' id='90' name='despesa_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12500' x='77500' y='73031' />
+        <zone h='2531' id='91' name='card_animais assistidos' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12700' x='64100' y='85469' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='4600' minheight='4600' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='131' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99500' id='130' param='vert' type-v2='layout-flow' w='98400' x='800' y='250'>
+                <zone fixed-size='280' h='99500' id='12' is-centered='0' is-fixed='true' type-v2='bitmap' w='98400' x='800' y='250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffaa0016' />
+                  </zone-style>
+                </zone>
+                <zone h='4594' id='52' type-v2='text' w='97700' x='900' y='375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffaa001b' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4563' id='3' type-v2='text' w='63200' x='4000' y='531'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='26'>Quanto custa a responsabilidade?</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='24'>Æ </run>
+                    <run fontalignment='1'>Æ&#10;&#10;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'>Saúde Única de animais de companhia, pessoas e meio ambiente</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'> nas aldeias indígenas da Grande Florianópolis </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='110' h='3438' id='16' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/logo OBA.png' type-v2='bitmap' w='22400' x='68800' y='781'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='750' id='17' type-v2='text' w='19000' x='71000' y='3906'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Verdana' fontsize='10'>Organização Bem-Animal</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5469' id='5' type-v2='text' w='35500' x='7400' y='5375'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>As aldeias indígenas da Grande Florianópolis </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>têm populações predominantemente da etnia </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Guarani, conhecidas pela receptividade a cães 
+e gatos. No entanto, tal receptividade promove </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>uma </run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>superpopulação de animais </run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>domésticos, </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>potencializando as </run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>zoonoses</run>
+                    <run fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Æ </run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>e aumentando </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>a vulnerabilidade das pessoas a</run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'> doenças</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='237' h='7406' id='7' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/saúde única.png' type-v2='bitmap' w='22900' x='41700' y='5719'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5406' id='8' type-v2='text' w='26500' x='63400' y='9500'>
+                  <formatted-text>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Essa indissociabilidade da saúde humana, animal e ambiental demonstra o que a Organização Mundial da Saúde (OMS) chama de </run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Saúde Única</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau light ' fontsize='11'>Saúde é uma</run>
+                    <run bold='true' fontalignment='2' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'> questão pública</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>, que requer </run>
+                    <run bold='true' fontalignment='2' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>recursos e ações continuados</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> para a promoção de equilíbrio nessas esferas. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5594' id='6' type-v2='text' w='37600' x='7100' y='10656'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Algumas dessas comunidades estão em áreas próximas a unidades de conservação e a grande quantidade dos animais pode causar problemas, como </run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>predação de fauna nativa</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'> pela falta de alimentos, </run>
+                    <run fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>brigas interespecíficas</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'> e aumento </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>da incidência dos </run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>maus-tratos</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>.</run>
+                    <run>Æ&#10;&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='1188' id='9' type-v2='text' w='37200' x='31400' y='15594'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='22'>E o que tem sido feito? </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4781' id='10' type-v2='text' w='76800' x='10000' y='16313'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>A </run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Organização Bem-Animal (OBA - Floripa)</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> é uma organização não-governamental que visa a proteção dos direitos dos animais e tem sede em Florianópolis, SC. Desde 2008, atende a cães e gatos das aldeias indígenas, realizando visitas técnicas para controle de zoonoses, controle populacional através da cirurgia de </run>
+                    <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>castração, educação ambiental, distribuição de ração, orientações e cuidados veterinários</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='225' h='7031' id='18' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (1).png' type-v2='bitmap' w='32800' x='10400' y='19813'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='205' h='6406' id='19' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (2).png' type-v2='bitmap' w='28400' x='67500' y='20844'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3969' id='15' type-v2='text' w='30100' x='35100' y='21656'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>Comunidades atendidas - 2023</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='10'>Itaty (Morro dos Cavalos), Praia de Fora 1, </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='10'>Yy’nn Moroti Wherá (Biguaçu), Tekoa Porã (Biguaçu), Tavaí (Canelinha).</run>
+                    <run>Æ&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffaa0037' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4281' id='22' type-v2='text' w='36400' x='49600' y='26875'>
+                  <formatted-text>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Os cuidados veterinários e castrações evitam a transmissão de doenças e a proliferação de animais. Para se ter uma ideia, cada gato </run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>pode engravidar até 4 vezes ao ano, sendo </run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>que cada ninhada gera até 6 filhotes.</run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light'>Fonte: </run>
+                    <run auto-url='true' fontalignment='2' fontcolor='#000000' fontname='Tableau Light' hyperlink='tabdoc:load-url url=&amp;quot;https://www.mvhclinic.org&amp;quot;'>https://www.mvhclinic.org</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='213' h='6656' id='21' is-fixed='true' name='cuidados' w='38400' x='51600' y='31500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3094' id='26' type-v2='text' w='85900' x='6000' y='38625'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>De 2016 a 2019, a ONG contou com o </run>
+                    <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>incentivo financeiro</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> do Segundo Setor devido a um projeto de compensação ambiental (projeto Autopista Litoral Sul), sendo notáveis nos gráficos maiores receitas e despesas para as atividades nesse período. Assim, é evidente a</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Æ </run>
+                    <run fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>necessidade de mais estrutura e recursos continuados para que mais possa ser feito</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5781' id='75' mode='checkdropdown' name='despesa_receita/ano' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='8300' x='77700' y='44906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2531' id='88' mode='checkdropdown' name='despesa_receita/ano' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12700' x='77800' y='46688'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='11875' id='28' is-fixed='true' name='despesa_receita/ano' w='68200' x='6800' y='41906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1750' id='29' name='despesa_receita/ano' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[:Measure Names]' show-title='false' type-v2='color' w='11500' x='77700' y='43281'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5656' id='76' mode='checkdropdown' name='receita_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='8200' x='77600' y='58094'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2531' id='89' mode='checkdropdown' name='receita_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12800' x='77600' y='59875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='12656' id='30' is-fixed='true' name='receita_cat ' w='81300' x='6900' y='54500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2031' id='31' name='receita_cat ' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[sum:receita:qk]' type-v2='color' w='12900' x='77200' y='56031'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5656' id='77' mode='checkdropdown' name='despesa_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='7800' x='77500' y='71313'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2531' id='90' mode='checkdropdown' name='despesa_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12500' x='77500' y='73031'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='13063' id='32' is-fixed='true' name='despesa_cat ' w='73300' x='6800' y='67625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1781' id='33' name='despesa_cat ' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[sum:despesas:qk]' type-v2='color' w='12700' x='77200' y='69250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='2031' id='40' type-v2='text' w='64700' x='15000' y='81844'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='14'>Estimativa de animais assistidos</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='11'>(renda total / custo anual médio por animal)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3500' id='87' type-v2='text' w='26200' x='34500' y='83906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fbca80' />
+                  </zone-style>
+                </zone>
+                <zone h='1563' id='80' mode='checkdropdown' name='card_animais assistidos' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data (income):ok]' type-v2='filter' values='database' w='8600' x='64000' y='83938'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2531' id='91' mode='checkdropdown' name='card_animais assistidos' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12700' x='64100' y='85469'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='58' h='1813' id='38' is-fixed='true' name='card_animais assistidos' show-title='false' w='20700' x='40200' y='84875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='9813' id='36' is-fixed='true' name='previsão' w='73300' x='8600' y='88906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1375' id='37' name='previsão' pane-specification-id='1' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[none:Forecast Indicator:nk]' show-title='false' type-v2='color' w='10000' x='83500' y='97125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='500' id='66' type-v2='text' w='10000' x='85500' y='97813'>
+                  <formatted-text>
+                    <run fontcolor='#000000'>Previsões</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fef7e8' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{249AB8C6-C952-474B-8F25-FA4BD9484323}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard (st)'>
       <style>
         <style-rule element='dash-text'>
           <format attr='text-align' id='dash-text_15' value='center' />
@@ -2618,9 +3335,738 @@ e gatos. No entanto, tal receptividade promove </run>
       </devicelayouts>
       <simple-id uuid='{8F5E1EC3-3E87-4920-AB29-887042B4EE53}' />
     </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard (test)'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='text-align' id='dash-text_15' value='center' />
+          <format attr='vertical-align' id='dash-text_15' value='center' />
+          <format attr='wrap' id='dash-text_15' value='on' />
+        </style-rule>
+      </style>
+      <size maxheight='3200' maxwidth='1000' minheight='3200' minwidth='1000' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Sheet1 (Múltiplas conexões)' name='federated.1u0ts2b16y6zay1eybwme149tvmd' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1u0ts2b16y6zay1eybwme149tvmd'>
+        <column caption='Financiamento' datatype='string' name='[Data (grupo)]' role='dimension' type='nominal'>
+          <calculation class='categorical-bin' column='[data]' default='&quot;Sim (2016-2019)&quot;' new-bin='true'>
+            <bin default-name='false' value='&quot;Não&quot;'>
+              <value>#2020-01-01#</value>
+              <value>#2020-02-01#</value>
+              <value>#2020-03-01#</value>
+              <value>#2020-04-01#</value>
+              <value>#2020-05-01#</value>
+              <value>#2020-06-01#</value>
+              <value>#2020-07-01#</value>
+              <value>#2020-08-01#</value>
+              <value>#2020-09-01#</value>
+              <value>#2020-10-01#</value>
+              <value>#2020-11-01#</value>
+              <value>#2020-12-01#</value>
+              <value>#2021-01-01#</value>
+              <value>#2021-02-01#</value>
+              <value>#2021-03-01#</value>
+              <value>#2021-04-01#</value>
+              <value>#2021-05-01#</value>
+              <value>#2021-06-01#</value>
+              <value>#2021-07-01#</value>
+              <value>#2021-08-01#</value>
+              <value>#2021-09-01#</value>
+              <value>#2021-10-01#</value>
+              <value>#2021-11-01#</value>
+              <value>#2021-12-01#</value>
+              <value>#2022-01-01#</value>
+              <value>#2022-02-01#</value>
+              <value>#2022-03-01#</value>
+              <value>#2022-04-01#</value>
+              <value>#2022-05-01#</value>
+              <value>#2022-06-01#</value>
+              <value>#2022-07-01#</value>
+              <value>#2022-08-01#</value>
+              <value>#2022-09-01#</value>
+              <value>#2022-10-01#</value>
+              <value>#2022-11-01#</value>
+            </bin>
+          </calculation>
+        </column>
+        <column caption='Data (Income)' datatype='date' name='[data (income)]' role='dimension' type='ordinal' />
+        <column caption='Data' datatype='date' name='[data]' role='dimension' type='ordinal' />
+        <column-instance column='[data (income)]' derivation='Year' name='[yr:data (income):ok]' pivot='key' type='ordinal' />
+        <column-instance column='[data]' derivation='Year' name='[yr:data:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='99500' id='114' param='horz' type-v2='layout-flow' w='98400' x='800' y='250'>
+            <zone h='99500' id='110' type-v2='layout-basic' w='98400' x='800' y='250'>
+              <zone h='99500' id='12' is-centered='0' type-v2='bitmap' w='98400' x='800' y='250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#ffaa0016' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='3500' id='87' type-v2='text' w='26200' x='34500' y='83906'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#fbca80' />
+          </zone-style>
+        </zone>
+        <zone h='4594' id='52' type-v2='text' w='97700' x='900' y='375'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffaa001b' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='4563' id='3' type-v2='text' w='63200' x='4000' y='531'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='26'>Quanto custa a responsabilidade?</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='24'>Æ </run>
+            <run fontalignment='1'>Æ&#10;&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'>Saúde Única de animais de companhia, pessoas e meio ambiente</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'> nas aldeias indígenas da Grande Florianópolis </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5469' id='5' type-v2='text' w='35500' x='7400' y='5375'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>As aldeias indígenas da Grande Florianópolis </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>têm populações predominantemente da etnia </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Guarani, conhecidas pela receptividade a cães 
+e gatos. No entanto, tal receptividade promove </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>uma </run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>superpopulação de animais </run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>domésticos, </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>potencializando as </run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>zoonoses</run>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Æ </run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>e aumentando </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>a vulnerabilidade das pessoas a</run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'> doenças</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5594' id='6' type-v2='text' w='37600' x='7100' y='10656'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Algumas dessas comunidades estão em áreas próximas a unidades de conservação e a grande quantidade dos animais pode causar problemas, como </run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>predação de fauna nativa</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'> pela falta de alimentos, </run>
+            <run fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>brigas interespecíficas</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'> e aumento </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>da incidência dos </run>
+            <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>maus-tratos</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>.</run>
+            <run>Æ&#10;&#10;&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone h='7406' id='7' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/saúde única.png' type-v2='bitmap' w='22900' x='41700' y='5719' />
+        <zone forceUpdate='true' h='5406' id='8' type-v2='text' w='26500' x='63400' y='9500'>
+          <formatted-text>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Essa indissociabilidade da saúde humana, animal e ambiental demonstra o que a Organização Mundial da Saúde (OMS) chama de </run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Saúde Única</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau light ' fontsize='11'>Saúde é uma</run>
+            <run bold='true' fontalignment='2' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'> questão pública</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>, que requer </run>
+            <run bold='true' fontalignment='2' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>recursos e ações continuados</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> para a promoção de equilíbrio nessas esferas. </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='1188' id='9' type-v2='text' w='37200' x='31400' y='15594'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='22'>E o que tem sido feito? </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='4781' id='10' type-v2='text' w='76800' x='10000' y='16313'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>A </run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Organização Bem-Animal (OBA - Floripa)</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> é uma organização não-governamental que visa a proteção dos direitos dos animais e tem sede em Florianópolis, SC. Desde 2008, atende a cães e gatos das aldeias indígenas, realizando visitas técnicas para controle de zoonoses, controle populacional através da cirurgia de </run>
+            <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>castração, educação ambiental, distribuição de ração, orientações e cuidados veterinários</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3969' id='15' type-v2='text' w='30100' x='35100' y='21656'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>Comunidades atendidas - 2023</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='10'>Itaty (Morro dos Cavalos), Praia de Fora 1, </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Tableau Light' fontsize='10'>Yy’nn Moroti Wherá (Biguaçu), Tekoa Porã (Biguaçu), Tavaí (Canelinha).</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffaa0037' />
+          </zone-style>
+        </zone>
+        <zone h='3438' id='16' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/logo OBA.png' type-v2='bitmap' w='22400' x='68800' y='781' />
+        <zone forceUpdate='true' h='750' id='17' type-v2='text' w='19000' x='71000' y='3906'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Verdana' fontsize='10'>Organização Bem-Animal</run>
+          </formatted-text>
+        </zone>
+        <zone h='7031' id='18' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (1).png' type-v2='bitmap' w='32800' x='10400' y='19813' />
+        <zone h='6406' id='19' is-centered='0' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (2).png' type-v2='bitmap' w='28400' x='67500' y='20844' />
+        <zone h='6656' id='21' name='cuidados' w='38400' x='51600' y='31500' />
+        <zone forceUpdate='true' h='4281' id='22' type-v2='text' w='36400' x='49600' y='26875'>
+          <formatted-text>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Os cuidados veterinários e castrações evitam a transmissão de doenças e a proliferação de animais. Para se ter uma ideia, cada gato </run>
+            <run fontalignment='2'>Æ&#10;</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>pode engravidar até 4 vezes ao ano, sendo </run>
+            <run fontalignment='2'>Æ&#10;</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>que cada ninhada gera até 6 filhotes.</run>
+            <run fontalignment='2'>Æ&#10;</run>
+            <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light'>Fonte: </run>
+            <run auto-url='true' fontalignment='2' fontcolor='#000000' fontname='Tableau Light' hyperlink='tabdoc:load-url url=&amp;quot;https://www.mvhclinic.org&amp;quot;'>https://www.mvhclinic.org</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='3094' id='26' type-v2='text' w='85900' x='6000' y='38625'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>De 2016 a 2019, a ONG contou com o </run>
+            <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>incentivo financeiro</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> do Segundo Setor devido a um projeto de compensação ambiental (projeto Autopista Litoral Sul), sendo notáveis nos gráficos maiores receitas e despesas para as atividades nesse período. Assim, é evidente a</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Æ </run>
+            <run fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>necessidade de mais estrutura e recursos continuados para que mais possa ser feito</run>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+          </formatted-text>
+        </zone>
+        <zone h='11875' id='28' name='despesa_receita/ano' w='68200' x='6800' y='41906' />
+        <zone h='1750' id='29' name='despesa_receita/ano' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[:Measure Names]' show-title='false' type-v2='color' w='11500' x='77700' y='43281' />
+        <zone h='12656' id='30' name='receita_cat ' w='81300' x='6900' y='54500' />
+        <zone h='2031' id='31' name='receita_cat ' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[sum:receita:qk]' type-v2='color' w='12900' x='77200' y='56031' />
+        <zone h='13063' id='32' name='despesa_cat ' w='73300' x='6800' y='67625' />
+        <zone h='1781' id='33' name='despesa_cat ' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[sum:despesas:qk]' type-v2='color' w='12700' x='77200' y='69250' />
+        <zone h='9813' id='36' name='previsão' w='73300' x='8600' y='88906' />
+        <zone h='1375' id='37' name='previsão' pane-specification-id='1' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[none:Forecast Indicator:nk]' show-title='false' type-v2='color' w='10000' x='83500' y='97125' />
+        <zone h='1813' id='38' name='card_animais assistidos' show-title='false' w='20700' x='40200' y='84875' />
+        <zone forceUpdate='true' h='2031' id='40' type-v2='text' w='64700' x='15000' y='81844'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='14'>Estimativa de animais assistidos</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='11'>(renda total / custo anual médio por animal)</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='500' id='66' type-v2='text' w='10000' x='85500' y='97813'>
+          <formatted-text>
+            <run fontcolor='#000000'>Previsões</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#fef7e8' />
+          </zone-style>
+        </zone>
+        <zone h='5781' id='75' mode='checkdropdown' name='despesa_receita/ano' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='8300' x='77700' y='44906' />
+        <zone h='5656' id='76' mode='checkdropdown' name='receita_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='8200' x='77600' y='58094' />
+        <zone h='5656' id='77' mode='checkdropdown' name='despesa_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='7800' x='77500' y='71313' />
+        <zone h='1563' id='80' mode='checkdropdown' name='card_animais assistidos' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data (income):ok]' type-v2='filter' values='database' w='8600' x='64000' y='83938' />
+        <zone h='2531' id='88' name='despesa_receita/ano' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12700' x='77800' y='46688' />
+        <zone h='2531' id='89' name='receita_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12800' x='77600' y='59875' />
+        <zone h='2531' id='90' name='despesa_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12500' x='77500' y='73031' />
+        <zone h='2531' id='91' name='card_animais assistidos' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12700' x='64100' y='85469' />
+        <zone dropdown='0' h='719' id='117' name='gif_gatos' playctrls='0' show-title='false' synchronized='1' trailctrls='0' type-v2='currpage' w='26700' x='14700' y='37063' />
+        <zone h='9469' id='115' name='gif_gatos' show-title='false' w='33900' x='11000' y='27313' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='4600' minheight='4600' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='131' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99500' id='130' param='vert' type-v2='layout-flow' w='98400' x='800' y='250'>
+                <zone fixed-size='280' h='99500' id='12' is-centered='0' is-fixed='true' type-v2='bitmap' w='98400' x='800' y='250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffaa0016' />
+                  </zone-style>
+                </zone>
+                <zone h='4594' id='52' type-v2='text' w='97700' x='900' y='375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffaa001b' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4563' id='3' type-v2='text' w='63200' x='4000' y='531'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='26'>Quanto custa a responsabilidade?</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='24'>Æ </run>
+                    <run fontalignment='1'>Æ&#10;&#10;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'>Saúde Única de animais de companhia, pessoas e meio ambiente</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12'> nas aldeias indígenas da Grande Florianópolis </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='110' h='3438' id='16' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/logo OBA.png' type-v2='bitmap' w='22400' x='68800' y='781'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='750' id='17' type-v2='text' w='19000' x='71000' y='3906'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Verdana' fontsize='10'>Organização Bem-Animal</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5469' id='5' type-v2='text' w='35500' x='7400' y='5375'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>As aldeias indígenas da Grande Florianópolis </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>têm populações predominantemente da etnia </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Guarani, conhecidas pela receptividade a cães 
+e gatos. No entanto, tal receptividade promove </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>uma </run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>superpopulação de animais </run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>domésticos, </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>potencializando as </run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>zoonoses</run>
+                    <run fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Æ </run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>e aumentando </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>a vulnerabilidade das pessoas a</run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'> doenças</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='237' h='7406' id='7' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/saúde única.png' type-v2='bitmap' w='22900' x='41700' y='5719'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5406' id='8' type-v2='text' w='26500' x='63400' y='9500'>
+                  <formatted-text>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Essa indissociabilidade da saúde humana, animal e ambiental demonstra o que a Organização Mundial da Saúde (OMS) chama de </run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Saúde Única</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau light ' fontsize='11'>Saúde é uma</run>
+                    <run bold='true' fontalignment='2' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'> questão pública</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>, que requer </run>
+                    <run bold='true' fontalignment='2' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>recursos e ações continuados</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> para a promoção de equilíbrio nessas esferas. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5594' id='6' type-v2='text' w='37600' x='7100' y='10656'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Algumas dessas comunidades estão em áreas próximas a unidades de conservação e a grande quantidade dos animais pode causar problemas, como </run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>predação de fauna nativa</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'> pela falta de alimentos, </run>
+                    <run fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>brigas interespecíficas</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'> e aumento </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>da incidência dos </run>
+                    <run bold='true' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>maus-tratos</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='11'>.</run>
+                    <run>Æ&#10;&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='1188' id='9' type-v2='text' w='37200' x='31400' y='15594'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='22'>E o que tem sido feito? </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4781' id='10' type-v2='text' w='76800' x='10000' y='16313'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>A </run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Organização Bem-Animal (OBA - Floripa)</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> é uma organização não-governamental que visa a proteção dos direitos dos animais e tem sede em Florianópolis, SC. Desde 2008, atende a cães e gatos das aldeias indígenas, realizando visitas técnicas para controle de zoonoses, controle populacional através da cirurgia de </run>
+                    <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>castração, educação ambiental, distribuição de ração, orientações e cuidados veterinários</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='225' h='7031' id='18' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (1).png' type-v2='bitmap' w='32800' x='10400' y='19813'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='205' h='6406' id='19' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/Vanessa/Downloads/Dados/Programas/Repositório Git/NGO_DataAnalysis/images/card (2).png' type-v2='bitmap' w='28400' x='67500' y='20844'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3969' id='15' type-v2='text' w='30100' x='35100' y='21656'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Tableau Bold' fontsize='12'>Comunidades atendidas - 2023</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='10'>Itaty (Morro dos Cavalos), Praia de Fora 1, </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Tableau Light' fontsize='10'>Yy’nn Moroti Wherá (Biguaçu), Tekoa Porã (Biguaçu), Tavaí (Canelinha).</run>
+                    <run>Æ&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffaa0037' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4281' id='22' type-v2='text' w='36400' x='49600' y='26875'>
+                  <formatted-text>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>Os cuidados veterinários e castrações evitam a transmissão de doenças e a proliferação de animais. Para se ter uma ideia, cada gato </run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>pode engravidar até 4 vezes ao ano, sendo </run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>que cada ninhada gera até 6 filhotes.</run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run fontalignment='2' fontcolor='#000000' fontname='Tableau Light'>Fonte: </run>
+                    <run auto-url='true' fontalignment='2' fontcolor='#000000' fontname='Tableau Light' hyperlink='tabdoc:load-url url=&amp;quot;https://www.mvhclinic.org&amp;quot;'>https://www.mvhclinic.org</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='9469' id='115' is-fixed='true' name='gif_gatos' show-title='false' w='33900' x='11000' y='27313'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='213' h='6656' id='21' is-fixed='true' name='cuidados' w='38400' x='51600' y='31500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3094' id='26' type-v2='text' w='85900' x='6000' y='38625'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>De 2016 a 2019, a ONG contou com o </run>
+                    <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>incentivo financeiro</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'> do Segundo Setor devido a um projeto de compensação ambiental (projeto Autopista Litoral Sul), sendo notáveis nos gráficos maiores receitas e despesas para as atividades nesse período. Assim, é evidente a</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='11'>Æ </run>
+                    <run fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold' fontsize='11'>necessidade de mais estrutura e recursos continuados para que mais possa ser feito</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Tableau Light' fontsize='11'>. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5781' id='75' mode='checkdropdown' name='despesa_receita/ano' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='8300' x='77700' y='44906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2531' id='88' mode='checkdropdown' name='despesa_receita/ano' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12700' x='77800' y='46688'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='11875' id='28' is-fixed='true' name='despesa_receita/ano' w='68200' x='6800' y='41906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1750' id='29' name='despesa_receita/ano' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[:Measure Names]' show-title='false' type-v2='color' w='11500' x='77700' y='43281'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5656' id='76' mode='checkdropdown' name='receita_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='8200' x='77600' y='58094'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2531' id='89' mode='checkdropdown' name='receita_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12800' x='77600' y='59875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='12656' id='30' is-fixed='true' name='receita_cat ' w='81300' x='6900' y='54500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2031' id='31' name='receita_cat ' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[sum:receita:qk]' type-v2='color' w='12900' x='77200' y='56031'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5656' id='77' mode='checkdropdown' name='despesa_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data:ok]' type-v2='filter' values='database' w='7800' x='77500' y='71313'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2531' id='90' mode='checkdropdown' name='despesa_cat ' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12500' x='77500' y='73031'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='13063' id='32' is-fixed='true' name='despesa_cat ' w='73300' x='6800' y='67625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1781' id='33' name='despesa_cat ' pane-specification-id='0' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[sum:despesas:qk]' type-v2='color' w='12700' x='77200' y='69250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='2031' id='40' type-v2='text' w='64700' x='15000' y='81844'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='14'>Estimativa de animais assistidos</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#333333' fontname='Tableau Light' fontsize='11'>(renda total / custo anual médio por animal)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3500' id='87' type-v2='text' w='26200' x='34500' y='83906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fbca80' />
+                  </zone-style>
+                </zone>
+                <zone h='1563' id='80' mode='checkdropdown' name='card_animais assistidos' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[yr:data (income):ok]' type-v2='filter' values='database' w='8600' x='64000' y='83938'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2531' id='91' mode='checkdropdown' name='card_animais assistidos' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[Data (grupo)]' show-all='false' type-v2='filter' values='database' w='12700' x='64100' y='85469'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='58' h='1813' id='38' is-fixed='true' name='card_animais assistidos' show-title='false' w='20700' x='40200' y='84875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='9813' id='36' is-fixed='true' name='previsão' w='73300' x='8600' y='88906'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1375' id='37' name='previsão' pane-specification-id='1' param='[federated.1u0ts2b16y6zay1eybwme149tvmd].[none:Forecast Indicator:nk]' show-title='false' type-v2='color' w='10000' x='83500' y='97125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='500' id='66' type-v2='text' w='10000' x='85500' y='97813'>
+                  <formatted-text>
+                    <run fontcolor='#000000'>Previsões</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#fef7e8' />
+                  </zone-style>
+                </zone>
+                <zone dropdown='0' h='719' id='117' name='gif_gatos' playctrls='0' show-title='false' synchronized='1' trailctrls='0' type-v2='currpage' w='26700' x='14700' y='37063'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1E63DD34-8A4F-4C17-B820-53E03B4B971D}' />
+    </dashboard>
   </dashboards>
   <windows source-height='72'>
-    <window class='dashboard' maximized='true' name='Dashboard'>
+    <window class='dashboard' name='Dashboard (st)'>
       <viewpoints>
         <viewpoint name='card_animais assistidos' />
         <viewpoint name='cuidados' />
@@ -2631,7 +4077,7 @@ e gatos. No entanto, tal receptividade promove </run>
         <viewpoint name='gif_gatos'>
           <current-page>
             <multibucket>
-              <bucket>3</bucket>
+              <bucket>12</bucket>
             </multibucket>
           </current-page>
           <zoom type='entire-view' />
@@ -2646,6 +4092,52 @@ e gatos. No entanto, tal receptividade promove </run>
         <device name='Generic Desktop Monitor' type='Desktop' />
       </device-preview>
       <simple-id uuid='{414C0B87-63AE-444C-A291-5703DA911496}' />
+    </window>
+    <window class='dashboard' name='Dashboard (test)'>
+      <viewpoints>
+        <viewpoint name='card_animais assistidos' />
+        <viewpoint name='cuidados' />
+        <viewpoint name='despesa_cat ' />
+        <viewpoint name='despesa_receita/ano'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='gif_gatos'>
+          <current-page>
+            <multibucket>
+              <bucket>12</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='previsão'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='receita_cat ' />
+      </viewpoints>
+      <active id='117' />
+      <device-preview>
+        <device name='Generic Desktop Monitor' type='Desktop' />
+      </device-preview>
+      <simple-id uuid='{7D3B8812-605F-4624-9C46-0335DE7110B6}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard (apr)'>
+      <viewpoints>
+        <viewpoint name='card_animais assistidos' />
+        <viewpoint name='cuidados' />
+        <viewpoint name='despesa_cat ' />
+        <viewpoint name='despesa_receita/ano'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='previsão'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='receita_cat ' />
+      </viewpoints>
+      <active id='132' />
+      <device-preview>
+        <device name='Generic Desktop Monitor' type='Desktop' />
+      </device-preview>
+      <simple-id uuid='{EC15A8CF-502F-41C9-8876-6DF1B330947D}' />
     </window>
     <window class='worksheet' name='despesa_receita/ano'>
       <cards>
