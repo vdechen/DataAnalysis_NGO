@@ -1,7 +1,7 @@
 # NGO_DataAnalysis
  
 # Project Goal and Description
-This data analysis and visualization project aimed at presenting the work of OBA-Floripa NGO to authorities and the general population. The idea is to call attention for public health issues concearning these activities and, therefore, to claim the need for stable funding resources.  
+This data analysis and visualization project aimed at presenting the work of OBA-Floripa NGO to authorities and the general population. The idea is to claim the need for continued funding resources, given the positive impact of the organization activities in public health issues. 
 
 # Technologies 
 - Python (Pandas, Numpy, Regex)
