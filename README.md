@@ -23,6 +23,7 @@ This data analysis and visualization project aimed at presenting the work of OBA
 - The next steps for this project are the dashboard publication on Streamlit and the pipeline creation, so people from the NGO can update the dashboard values by adding an Excel file with new financion information to Streamlit. 
 
 # Conclusion
+The final dashboard can be found on https://public.tableau.com/app/profile/vanessa.de.ara.jo.dechen/viz/NGO-DataAnalysis/Dashboardst?publish=yes and some conclusions can be drawn from it: 
 - 428 surgical castrations were made in cats and dogs (2016-2019), which prevents a super population of animals (each cat can have over 20 others in a year); 
 - R$ 331,00 was the average price to take care of each animal per year (2016-2019), which included a total average of 40 veterinary treatments, medications and vaccines per animal. 
 - During the time that the NGO got financial investments (2016-2019), much more income and expenses are noticed, so there is a lot more to be done if resources are available;
