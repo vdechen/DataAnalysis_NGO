@@ -20,7 +20,7 @@ sheet = client.open_by_url("https://docs.google.com/spreadsheets/d/1DTJpebBQeccO
 
 # excel upload and transformation
 
-arquivo = st.file_uploader('Insira o arquivo em excel. Confira bem os dados e a formatação conforme o modelo fornecido antes de enviar.', type = ['xls', 'xlsx'])
+arquivo = st.file_uploader('Insira o arquivo em excel. Antes de enviar, confira se os dados e a formatação estão conforme o modelo fornecido.', type = ['xls', 'xlsx'])
 
 if arquivo: 
     df = pd.read_excel(arquivo)
