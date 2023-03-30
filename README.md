@@ -30,10 +30,9 @@ The final dashboard can be found on https://public.tableau.com/app/profile/vanes
 - When funding is not available, most of the NGO resources come from donations and product sales; 
 - Most of the NGO expenses are in taxes for the gorvernment, even though the organization develops a non-profitable public service;
 - When funding resources were available, an average of 1047 animals could be assisted versus 601 when there was not enough money;
-- A prediction graphic for expenses and income was added to the dashboard, but given the unusual financial activities between 2016-2019 it might take a few years until patterns from the regular financial activities from the NGO can be interpreted by the model and displayed for better estimations. 
+- A prediction graphic for expenses and income was added to the dashboard, but given the unusual financial activities between 2016-2019 it might take a few years until patterns from the regular financial activities can be interpreted by the model and displayed for better estimations. 
   
 # Contact
 - LinkedIn: vanessadechen
 - GitHub: /vdechen
 - Email: vanessadechen@gmail.com
-
