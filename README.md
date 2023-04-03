@@ -1,7 +1,8 @@
 # NGO_DataAnalysis
  
 # Project Goal and Description
-This data analysis and visualization project aimed at presenting the work of OBA-Floripa NGO to authorities and the general population. The NGO has been taking care of cats and dogs from indigenous communities near Florianópolis since 2008, which improves people's life quality due to disease control, education and many other actions that create a healthier environment. The idea is to claim the need for continued funding resources, given the positive impact of the organization's activities on public health issues. 
+This data analysis and visualization project aimed at presenting the work of OBA-Floripa (Organização Bem-Animal) NGO to authorities and the general population. The NGO has been taking care of cats and dogs from indigenous communities near Florianópolis since 2008, which improves people's life quality due to disease control, education and many other actions that create a healthier environment. The idea is to claim the need for continued funding resources, given the positive impact of the organization's activities on public health issues. 
+![logo OBA](https://raw.githubusercontent.com/vdechen/DataAnalysis_NGO/main/images/logo%20OBA.png)
 
 # Technologies 
 - Python (Pandas, Numpy, Regex, Pycaret)
