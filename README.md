@@ -1,8 +1,8 @@
 # NGO_DataAnalysis
- 
+ ![logo OBA](https://raw.githubusercontent.com/vdechen/DataAnalysis_NGO/main/images/logo_readme.jpg)
+
 # Project Goal and Description
 This data analysis and visualization project aimed at presenting the work of OBA-Floripa (Organização Bem-Animal) NGO to authorities and the general population. The NGO has been taking care of cats and dogs from indigenous communities near Florianópolis since 2008, which improves people's life quality due to disease control, education and many other actions that create a healthier environment. The idea is to claim the need for continued funding resources, given the positive impact of the organization's activities on public health issues. 
- ![logo OBA](https://raw.githubusercontent.com/vdechen/DataAnalysis_NGO/main/images/logo_readme.jpg)
  
 # Technologies 
 - Python (Pandas, Numpy, Regex, Pycaret)
@@ -32,6 +32,7 @@ The final dashboard can be found on https://public.tableau.com/app/profile/vanes
 - Most of the NGO expenses are in taxes for the gorvernment, even though the organization develops a non-profitable public service;
 - When funding resources were available, an average of 1047 animals could be assisted versus 601 when there was not enough money;
 - A prediction graphic for expenses and income was added to the dashboard, but given the unusual financial activities between 2016-2019 it might take a few years until patterns from the regular financial activities can be interpreted by the model and displayed for better estimations. 
+
 ![saúde única](https://raw.githubusercontent.com/vdechen/DataAnalysis_NGO/main/images/sa%C3%BAde%20%C3%BAnica.png)
  
 # Contact
