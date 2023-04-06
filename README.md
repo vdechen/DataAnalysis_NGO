@@ -15,8 +15,8 @@ This data analysis and visualization project aimed at presenting the work of OBA
 - An Excel file with financial information from the NGO was cleaned, manipulated and turned into a single dataframe;
 - An Excel file with animal care information from the NGO was also cleaned and turned into another dataframe;
 - 'income' and 'expenses' parts of the data were split into two separated dataframes;
-- The following categories were created and applied for 'favorecido' in 'expenses': salário e auxílio alimentação, suprimentos, medicações e veterinários, hospedagem de animais, ração e agropecuárias, transporte, empréstimos e aplicações, divulgação/ gráficas e tecnologia, taxas e impostos, materiais para venda, outros.
-- The following categories were created and applied for 'depositante' in 'income': doações e vendas, empréstimos e aplicações, projeto Autopista Litoral Sul, governo, outros.
+- The following categories were created and applied for 'favorecido' in 'expenses': salário e auxílio alimentação, suprimentos, medicações e veterinários, hospedagem de animais, ração e agropecuárias, transporte, empréstimos e aplicações, divulgação/ gráficas e tecnologia, taxas e impostos, materiais para venda, outros;
+- The following categories were created and applied for 'depositante' in 'income': doações e vendas, empréstimos e aplicações, projeto Autopista Litoral Sul, governo, outros;
 
  ![expenses_income](https://raw.githubusercontent.com/vdechen/DataAnalysis_NGO/main/images/expenses_income.png)
  
